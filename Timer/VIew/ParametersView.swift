@@ -142,7 +142,4 @@ extension ParametersView: UIPickerViewDataSource {
         }
         return 0
     }
-    func pickerView(_ pickerView: UIPickerView, didSelectRow row: Int, inComponent component: Int) {
-        print(row)
-    }
 }

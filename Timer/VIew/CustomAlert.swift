@@ -219,7 +219,6 @@ class CustomAlert: UIView {
     }
     
     private func registerForKeyNotification() {
-        print("registerForKeyNotification")
         NotificationCenter.default.addObserver(self,
                                                selector: #selector(keyboardWillShow),
                                                name: UIResponder.keyboardWillShowNotification,
@@ -231,7 +230,6 @@ class CustomAlert: UIView {
     }
     
     private func removeForKeyNotification() {
-        print("removeForKeyNotification")
         NotificationCenter.default.removeObserver(self,
                                                   name: UIResponder.keyboardWillShowNotification,
                                                   object: nil)
@@ -289,9 +287,6 @@ extension CustomAlert: UIPickerViewDataSource {
             return 60
         }
         return 0
-    }
-    func pickerView(_ pickerView: UIPickerView, didSelectRow row: Int, inComponent component: Int) {
-        print(row)
     }
 }
 
