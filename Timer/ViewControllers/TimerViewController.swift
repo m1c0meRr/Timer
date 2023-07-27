@@ -171,7 +171,7 @@ class TimerViewController: UIViewController {
             }
         }
     }
-
+    
     @objc private func startTimer() {
         if numberOfSets == UserSettings.shared.setInt {
             alertOk(title: "Повторения закончились", message: .none)
@@ -206,7 +206,7 @@ class TimerViewController: UIViewController {
     
     private func setConstraints() {
         NSLayoutConstraint.activate([
-        
+            
             headerLabel.topAnchor.constraint(equalTo: view.topAnchor, constant: 10),
             headerLabel.leadingAnchor.constraint(equalTo: view.leadingAnchor, constant: 5),
             headerLabel.trailingAnchor.constraint(equalTo: view.trailingAnchor, constant: -5),
@@ -257,15 +257,15 @@ extension TimerViewController: NextSetTimerProtocol {
             
             if sets != "" && timeBool != 0 {
                 guard let numberOfSet = Int(sets) else { return }
-                    numberOfSets = 0
-                    timerView.numberOfSetLabel.text = "\(numberOfSets)/\(sets)"
-                    timerView.numberOfTimerLabel.text = "\(minNumber) мин. \(secNumber) сек."
-                    timerLabel.text = "\(minNumber.setZeroForSoceounds()):\(secNumber.setZeroForSoceounds())"
+                numberOfSets = 0
+                timerView.numberOfSetLabel.text = "\(numberOfSets)/\(sets)"
+                timerView.numberOfTimerLabel.text = "\(minNumber) мин. \(secNumber) сек."
+                timerLabel.text = "\(minNumber.setZeroForSoceounds()):\(secNumber.setZeroForSoceounds())"
                 
-                    durationTimer = minNumber * 60 + secNumber
+                durationTimer = minNumber * 60 + secNumber
                 
-                    UserSettings.shared.updateTimer(model: UserSettings.shared.self, sets: numberOfSet, min: minNumber, sec: secNumber)
-                    resetTimer()
+                UserSettings.shared.updateTimer(model: UserSettings.shared.self, sets: numberOfSet, min: minNumber, sec: secNumber)
+                resetTimer()
             } else {
                 alertOk(title: "Введите повторы и время", message: .none)
             }
@@ -322,4 +322,3 @@ extension TimerViewController {
         shapeLayer.beginTime = timeSinsePause
     }
 }
-

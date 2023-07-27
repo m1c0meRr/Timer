@@ -34,7 +34,7 @@ class ViewController: UIViewController {
     }()
     
     private let setsAndTimerView = ParametersView()
-
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         
@@ -86,7 +86,7 @@ class ViewController: UIViewController {
     
     private func setConstraints() {
         NSLayoutConstraint.activate([
-        
+            
             headerLabel.topAnchor.constraint(equalTo: view.topAnchor, constant: 100),
             headerLabel.leadingAnchor.constraint(equalTo: view.leadingAnchor, constant: 5),
             headerLabel.trailingAnchor.constraint(equalTo: view.trailingAnchor, constant: -5),
@@ -103,5 +103,3 @@ class ViewController: UIViewController {
         ])
     }
 }
-
-

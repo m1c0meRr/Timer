@@ -86,8 +86,6 @@ class ParametersView: UIView {
         addSubview(setsSlider)
         addSubview(timerLabel)
         addSubview(pickerButton)
-//        addSubview(timerSlider)
-        
     }
     
     @objc private func setsSliderChanged() {

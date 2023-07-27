@@ -17,7 +17,7 @@ class CustomAlert: UIView {
     }()
     
     private let alertView: UIView = {
-       let view = UIView()
+        let view = UIView()
         view.backgroundColor = #colorLiteral(red: 0.501960814, green: 0.501960814, blue: 0.501960814, alpha: 1)
         view.layer.cornerRadius = 20
         return view
@@ -28,7 +28,7 @@ class CustomAlert: UIView {
     private var mainView: UIView?
     private let setTextField = UITextField()
     private let timerTextField = UITextField()
-        
+    
     var buttonAction: ( (String, Int, Int) -> Void)?
     
     override init(frame: CGRect) {
@@ -86,8 +86,8 @@ class CustomAlert: UIView {
         
         let setsLabel = UILabel(frame: CGRect(x: 30,
                                               y: editingLabel.frame.maxY + 10,
-                                             width: alertView.frame.width - 60,
-                                             height: 25))
+                                              width: alertView.frame.width - 60,
+                                              height: 25))
         setsLabel.text = "Повторы"
         setsLabel.textColor = .white
         setsLabel.font = UIFont.systemFont(ofSize: 20)
@@ -115,9 +115,9 @@ class CustomAlert: UIView {
         alertView.addSubview(setTextField)
         
         let timerLabel = UILabel(frame: CGRect(x: 30,
-                                              y: setTextField.frame.maxY + 10,
-                                             width: alertView.frame.width - 60,
-                                             height: 20))
+                                               y: setTextField.frame.maxY + 10,
+                                               width: alertView.frame.width - 60,
+                                               height: 20))
         timerLabel.text = "Таймер"
         timerLabel.textColor = .white
         timerLabel.font = UIFont.systemFont(ofSize: 20)
@@ -158,9 +158,9 @@ class CustomAlert: UIView {
         }
         
         let cancelButton = UIButton(frame: CGRect(x: 50,
-                                              y: okButton.frame.maxY + 10,
-                                              width: alertView.frame.width - 100,
-                                              height: 35))
+                                                  y: okButton.frame.maxY + 10,
+                                                  width: alertView.frame.width - 100,
+                                                  height: 35))
         cancelButton.backgroundColor = .systemRed
         cancelButton.setTitle("Отмена", for: .normal)
         cancelButton.titleLabel?.textColor = .white
@@ -190,7 +190,7 @@ class CustomAlert: UIView {
         buttonAction?(setNumber, minNumber, timerNumber)
         dismisAlert()
     }
-
+    
     @objc private func dismisAlert() {
         guard let targetView = mainView else { return }
         
@@ -294,5 +294,4 @@ extension CustomAlert: UIPickerViewDataSource {
         print(row)
     }
 }
-    
 

@@ -111,9 +111,9 @@ class TimerView: UIView {
                                     axis: .horizontal,
                                     spacing: 10)
         timerStackView = UIStackView(arrangedSubviews: [timerLabel,
-                                                       numberOfTimerLabel],
-                                    axis: .horizontal,
-                                    spacing: 10)
+                                                        numberOfTimerLabel],
+                                     axis: .horizontal,
+                                     spacing: 10)
         
         addSubview(setsStackView)
         addSubview(setLineView)
@@ -133,7 +133,7 @@ class TimerView: UIView {
     
     private func setConstraints() {
         NSLayoutConstraint.activate([
-        
+            
             editingButton.topAnchor.constraint(equalTo: topAnchor, constant: 15),
             editingButton.trailingAnchor.constraint(equalTo: trailingAnchor, constant: -15),
             editingButton.heightAnchor.constraint(equalToConstant: 10),
@@ -167,4 +167,3 @@ class TimerView: UIView {
         fatalError("init(coder:) has not been implemented")
     }
 }
-
