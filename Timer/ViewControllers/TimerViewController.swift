@@ -157,7 +157,6 @@ class TimerViewController: UIViewController {
         timerLabel.text = "\(min.setZeroForSoceounds()):\(sec.setZeroForSoceounds())"
     }
     
-    
     @objc private func startButtonAction() {
         startTimer()
     }
@@ -237,6 +236,8 @@ class TimerViewController: UIViewController {
     }
 }
 
+//MARK: - NextSetTimerProtocol
+
 extension TimerViewController: NextSetTimerProtocol {
     func nextSetTimerTapped() {
         if numberOfSets < UserSettings.shared.setInt {
@@ -272,6 +273,8 @@ extension TimerViewController: NextSetTimerProtocol {
         }
     }
 }
+
+//MARK: - Animation
 
 extension TimerViewController {
     

@@ -48,11 +48,6 @@ class ViewController: UIViewController {
         view.addSubview(setsAndTimerView)
         view.addSubview(setButton)
     }
-    
-    @objc private func setButtonAction() {
-        presentTimer()
-    }
-    
     private func saveSetAndTime() {
         UserSettings.shared.minInt = setsAndTimerView.pickerButton.selectedRow(inComponent: 0)
         UserSettings.shared.secInt = setsAndTimerView.pickerButton.selectedRow(inComponent: 1)
@@ -82,6 +77,10 @@ class ViewController: UIViewController {
         } else {
             alertOk(title: "Установите ", message: "значение слайдера")
         }
+    }
+    
+    @objc private func setButtonAction() {
+        presentTimer()
     }
     
     private func setConstraints() {
